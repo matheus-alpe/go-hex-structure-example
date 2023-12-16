@@ -12,7 +12,7 @@ import (
 
 func main() {
     dbDriver := os.Getenv("DB_DRIVER")
-    dbDSN := os.Getenv("DB_DSN")
+    dbDSN := os.Getenv("DB_DATA_SOURCE_NAME")
 
     var dbAdapter ports.DbPort = db.NewAdapter(dbDriver, dbDSN)
     defer dbAdapter.CloseDbConnection()
